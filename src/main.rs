@@ -1,13 +1,14 @@
 use std::fs;
 use std::io;
-fn main(){
+
+fn main() {
     std::process::exit(real_main());
 }
 
-fn real_main() ->i32 {
+fn real_main() -> i32 {
     let args: Vec<_> = std::env::args().collect();
 
-    if args.len() <2 {
+    if args.len() < 2 {
         eprintln!("Usage: {} <filename>", args[0]);
         return 1;
     }
